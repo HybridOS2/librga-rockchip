@@ -2021,3 +2021,10 @@ IM_API IM_STATUS imosd(const rga_buffer_t osd,const rga_buffer_t dst, const im_r
                        im_osd_t *osd_info, int sync) {
     return imosd(osd, dst, osd_rect, osd_info, sync, NULL);
 }
+
+IM_API IM_STATUS improcess(rga_buffer_t src, rga_buffer_t dst, rga_buffer_t pat,
+                             im_rect srect, im_rect drect, im_rect prect, im_opt_t *opt_ptr, int usage)
+{
+    return improcess(src, dst, pat, srect, drect, prect, -1, NULL, opt_ptr, usage);
+}
+
